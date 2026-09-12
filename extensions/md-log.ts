@@ -433,7 +433,7 @@ export default function mdLog(pi: ExtensionAPI) {
 
 		if (blocks.length > 0) {
 			try {
-				fs.writeFileSync(logFile, blocks.join("\n\n") + "\n", "utf-8");
+				appendToFile(blocks.join("\n\n"));
 			} catch {
 				// ignore
 			}
