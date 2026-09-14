@@ -24,11 +24,14 @@ export const STAGING_ROOT = join(tmpdir(), "pi-visual-tools")
 export const FILES_DIRNAME = "viz"
 
 export const CHROME_CANDIDATES = [
+  "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
   "/Applications/Chromium.app/Contents/MacOS/Chromium",
 ]
 
 export function findChrome(): string | undefined {
+  const configured = process.env.PUPPETEER_EXECUTABLE_PATH
+  if (configured && existsSync(configured)) return configured
   for (const c of CHROME_CANDIDATES) if (existsSync(c)) return c
   return undefined
 }
