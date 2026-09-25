@@ -1,0 +1,22 @@
+{
+  "name": "learn",
+  "version": "0.1.0+codex.20260925123924",
+  "description": "Adaptive teaching through probe, plan, and motivated discovery.",
+  "author": {
+    "name": "Jakob Faber"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Learn",
+    "shortDescription": "Learn from foundations through discovery.",
+    "longDescription": "Maps your understanding, plans a dependency graph, and teaches one connected idea at a time with graded chat questions.",
+    "developerName": "Jakob Faber",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Use $learn to help me understand a topic."
+    ]
+  }
+}
